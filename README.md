@@ -1,6 +1,6 @@
-![Wlodzimierz The Cat](https://cdn.modrinth.com/data/4ERzEEU7/ea64d6a44df534ac8c23d489a95807147e73b265.jpeg)
+![Wlodzimierz The Cat](https://cdn.modrinth.com/data/4ERzEEU7/d9f1d312f95fd5c0754d745a283f6c74dd921cc1_96.webp)
 # Wlodzimiers Blocks
-### Wlodzimiers Blocks is a server-side mod that **plans to add** various custom blocks by using the [Polymer](https://github.com/Patbox/polymer) library by [Patbox](https://modrinth.com/user/Patbox)
+### Wlodzimiers Blocks is a server-side mod that **plans to add** various custom decoration and functional blocks by using the [Polymer](https://github.com/Patbox/polymer) library by [Patbox](https://modrinth.com/user/Patbox)
 
 ---
 
@@ -11,8 +11,3 @@ They're crafted with concrete blocks in the following pattern:
 We plan on adding many new blocks, we aren't limiting ourselves to Kitchen-themed blocks however! You can expect to see some other decorative blocks to pretty up your cozy house, so stay tuned for that!
 
 ---
-
-<details>
-<summary>Why "Wlodzimiers"?</summary>
-<p>"Wlodzimiers" is an inside joke in our (mine and selnov's) relationship. It's basically a misspelling of her cat's name "Włodzimierz" who's featured as this mod's icon!</p>
-</details>
