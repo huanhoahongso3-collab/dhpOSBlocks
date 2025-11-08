@@ -4,7 +4,6 @@ import eu.pb4.polymer.blocks.api.BlockModelType;
 import eu.pb4.polymer.blocks.api.PolymerBlockModel;
 import eu.pb4.polymer.blocks.api.PolymerBlockResourceUtils;
 import eu.pb4.polymer.blocks.api.PolymerTexturedBlock;
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -12,7 +11,10 @@ import net.minecraft.block.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
+import xyz.nucleoid.packettweaker.PacketContext;
 import xyz.zekiu.wlodzimiers_blocks.WlodzimiersBlocks;
 import xyz.zekiu.wlodzimiers_blocks.items.SimpleCustomBlockItem;
 
@@ -25,17 +27,17 @@ public class SimpleCustomBlock extends Block implements PolymerTexturedBlock {
 
     public SimpleCustomBlock(Settings settings, BlockModelType type, String modelId) {
         super(settings);
-        this.polymerBlockState = PolymerBlockResourceUtils.requestBlock(type, PolymerBlockModel.of(Identifier.of(WlodzimiersBlocks.MOD_ID, modelId)));
+        this.polymerBlockState = PolymerBlockResourceUtils.requestBlock(type, PolymerBlockModel.of(Identifier.of(WlodzimiersBlocks.MOD_ID, "block/" + modelId)));
     }
 
     private static void register(String modelId, BlockModelType type, AbstractBlock abstractBlock) {
-        var modId = Identifier.of(WlodzimiersBlocks.MOD_ID, modelId);
-        var block = Registry.register(Registries.BLOCK, modId,
-                new SimpleCustomBlock(FabricBlockSettings.copy(abstractBlock), type, modelId));
-        var item = new SimpleCustomBlockItem(new Item.Settings(), block, modelId);
+        var id = Identifier.of(WlodzimiersBlocks.MOD_ID, modelId);
+        var block = Registry.register(Registries.BLOCK, id,
+                new SimpleCustomBlock(Block.Settings.copy(abstractBlock).registryKey(RegistryKey.of(RegistryKeys.BLOCK, id)), type, modelId));
+        var item = new SimpleCustomBlockItem(new Item.Settings().useBlockPrefixedTranslationKey().registryKey(RegistryKey.of(RegistryKeys.ITEM, id)), block, modelId);
         items.add(item);
 
-        Registry.register(Registries.ITEM, modId, item);
+        Registry.register(Registries.ITEM, id, item);
     }
 
     public static void registerBlocks() {
@@ -59,7 +61,7 @@ public class SimpleCustomBlock extends Block implements PolymerTexturedBlock {
     }
 
     @Override
-    public BlockState getPolymerBlockState(BlockState state) {
+    public BlockState getPolymerBlockState(BlockState state, PacketContext context) {
         return this.polymerBlockState;
     }
 }

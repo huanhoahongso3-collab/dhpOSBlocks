@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "#*",
+    "*#"
+  ],
+  "key": {
+    "#": "minecraft:blue_concrete",
+    "*": "minecraft:white_concrete"
+  },
+  "result": {
+    "count": 4,
+    "id": "wlodzimiers_blocks:blue_kitchen_tiles"
+  }
+}

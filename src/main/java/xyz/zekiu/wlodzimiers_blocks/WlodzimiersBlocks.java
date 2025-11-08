@@ -27,13 +27,12 @@ public class WlodzimiersBlocks implements ModInitializer {
         PolymerItemGroupUtils.registerPolymerItemGroup(
                 Identifier.of(MOD_ID, MOD_ID),
                 new ItemGroup.Builder(ItemGroup.Row.BOTTOM, -1)
-                        .displayName(Text.literal("Wlodzimiers Blocks"))
+                        .displayName(Text.translatable("itemgroup.wlodzimiers_blocks"))
                         .icon(() -> new ItemStack(SimpleCustomBlock.items.get(0)))
                         .entries(((c, e) -> {
                             for (Item item : SimpleCustomBlock.items) e.add(item);
                         }))
                         .build());
-
         LOGGER.info("Wlodzimiers Blocks zostało załadowane miaał");
     }
 }
