@@ -28,6 +28,7 @@ dependencies {
     // Polymer
     modImplementation "eu.pb4:polymer-core:${project.polymer_version}"
     modImplementation "eu.pb4:polymer-resource-pack:${project.polymer_version}"
+    modImplementation "eu.pb4:polymer-resource-pack-extras:${project.polymer_version}"
     modImplementation "eu.pb4:polymer-blocks:${project.polymer_version}"
     modImplementation "eu.pb4:polymer-autohost:${project.polymer_version}"
 }
@@ -82,6 +83,10 @@ modrinth {
     projectId = "wlodzimiers-blocks"
     uploadFile = remapJar
     changelog = rootProject.file("CHANGELOG").text
+    dependencies {
+        required.project "fabric-api"
+        required.project "polymer"
+    }
 }
 
 curseforge {

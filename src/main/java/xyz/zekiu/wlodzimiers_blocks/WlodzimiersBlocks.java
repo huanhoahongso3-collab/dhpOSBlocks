@@ -22,7 +22,6 @@ public class WlodzimiersBlocks implements ModInitializer {
         PolymerResourcePackUtils.addModAssets(MOD_ID);
         PolymerResourcePackUtils.markAsRequired();
 
-
         SimpleCustomBlock.registerBlocks();
         PolymerItemGroupUtils.registerPolymerItemGroup(
                 Identifier.of(MOD_ID, MOD_ID),

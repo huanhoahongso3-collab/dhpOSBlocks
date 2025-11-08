@@ -4,6 +4,7 @@ import eu.pb4.polymer.blocks.api.BlockModelType;
 import eu.pb4.polymer.blocks.api.PolymerBlockModel;
 import eu.pb4.polymer.blocks.api.PolymerBlockResourceUtils;
 import eu.pb4.polymer.blocks.api.PolymerTexturedBlock;
+import eu.pb4.polymer.core.api.item.PolymerBlockItem;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -16,7 +17,6 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 import xyz.nucleoid.packettweaker.PacketContext;
 import xyz.zekiu.wlodzimiers_blocks.WlodzimiersBlocks;
-import xyz.zekiu.wlodzimiers_blocks.items.SimpleCustomBlockItem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,7 +34,7 @@ public class SimpleCustomBlock extends Block implements PolymerTexturedBlock {
         var id = Identifier.of(WlodzimiersBlocks.MOD_ID, modelId);
         var block = Registry.register(Registries.BLOCK, id,
                 new SimpleCustomBlock(Block.Settings.copy(abstractBlock).registryKey(RegistryKey.of(RegistryKeys.BLOCK, id)), type, modelId));
-        var item = new SimpleCustomBlockItem(new Item.Settings().useBlockPrefixedTranslationKey().registryKey(RegistryKey.of(RegistryKeys.ITEM, id)), block, modelId);
+        var item = new PolymerBlockItem(block, new Item.Settings().useBlockPrefixedTranslationKey().registryKey(RegistryKey.of(RegistryKeys.ITEM, id)), abstractBlock.asItem(), true);
         items.add(item);
 
         Registry.register(Registries.ITEM, id, item);
