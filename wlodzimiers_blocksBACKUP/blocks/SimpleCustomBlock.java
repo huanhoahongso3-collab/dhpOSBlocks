@@ -5,40 +5,39 @@ import eu.pb4.polymer.blocks.api.PolymerBlockModel;
 import eu.pb4.polymer.blocks.api.PolymerBlockResourceUtils;
 import eu.pb4.polymer.blocks.api.PolymerTexturedBlock;
 import eu.pb4.polymer.core.api.item.PolymerBlockItem;
+import net.minecraft.block.AbstractBlock;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
+import net.minecraft.item.Item;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
+import net.minecraft.util.Identifier;
 import xyz.nucleoid.packettweaker.PacketContext;
 import xyz.zekiu.wlodzimiers_blocks.WlodzimiersBlocks;
 
 import java.util.ArrayList;
 import java.util.List;
-import net.minecraft.core.Registry;
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.Identifier;
-import net.minecraft.resources.ResourceKey;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.state.BlockState;
 
 public class SimpleCustomBlock extends Block implements PolymerTexturedBlock {
     private final BlockState polymerBlockState;
     public static List<Item> items = new ArrayList<>();
 
-    public SimpleCustomBlock(Properties settings, BlockModelType type, String modelId) {
+    public SimpleCustomBlock(Settings settings, BlockModelType type, String modelId) {
         super(settings);
-        this.polymerBlockState = PolymerBlockResourceUtils.requestBlock(type, PolymerBlockModel.of(Identifier.fromNamespaceAndPath(WlodzimiersBlocks.MOD_ID, "block/" + modelId)));
+        this.polymerBlockState = PolymerBlockResourceUtils.requestBlock(type, PolymerBlockModel.of(Identifier.of(WlodzimiersBlocks.MOD_ID, "block/" + modelId)));
     }
 
-    private static void register(String modelId, BlockModelType type, BlockBehaviour abstractBlock) {
-        var id = Identifier.fromNamespaceAndPath(WlodzimiersBlocks.MOD_ID, modelId);
-        var block = Registry.register(BuiltInRegistries.BLOCK, id,
-                // new SimpleCustomBlock(Block.Settings.ofFullCopy(abstractBlock).setId(ResourceKey.create(Registries.BLOCK, id)), type, modelId));
-                new SimpleCustomBlock(Properties.ofFullCopy(abstractBlock).setId(ResourceKey.create(Registries.BLOCK, id)), type, modelId));
-        var item = new PolymerBlockItem(block, new Item.Properties().useBlockDescriptionPrefix().setId(ResourceKey.create(Registries.ITEM, id)), abstractBlock.asItem(), true);
+    private static void register(String modelId, BlockModelType type, AbstractBlock abstractBlock) {
+        var id = Identifier.of(WlodzimiersBlocks.MOD_ID, modelId);
+        var block = Registry.register(Registries.BLOCK, id,
+                new SimpleCustomBlock(Block.Settings.copy(abstractBlock).registryKey(RegistryKey.of(RegistryKeys.BLOCK, id)), type, modelId));
+        var item = new PolymerBlockItem(block, new Item.Settings().useBlockPrefixedTranslationKey().registryKey(RegistryKey.of(RegistryKeys.ITEM, id)), abstractBlock.asItem(), true);
         items.add(item);
 
-        Registry.register(BuiltInRegistries.ITEM, id, item);
+        Registry.register(Registries.ITEM, id, item);
     }
 
     public static void registerBlocks() {
