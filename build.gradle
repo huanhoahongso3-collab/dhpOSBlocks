@@ -85,10 +85,10 @@ jar {
 }
 
 modrinth {
-    versionName = "Wlodzimiers Blocks " + project.mod_version + " - " + project.minecraft_version
+    versionName = "dhpOS Blocks " + project.mod_version + " - " + project.minecraft_version
     versionNumber = project.mod_version
     token = System.getenv("MODRINTH_TOKEN")
-    projectId = "wlodzimiers-blocks"
+    projectId = "dhpos-blocks"
     uploadFile = remapJar
     changelog = rootProject.file("CHANGELOG").text
     dependencies {
@@ -107,7 +107,7 @@ curseforge {
         addGameVersion project.minecraft_version
 
         mainArtifact(remapJar) {
-            it.displayName = "Wlodzimiers Blocks " + project.mod_version + " - " + project.minecraft_version
+            it.displayName = "dhpOS Blocks " + project.mod_version + " - " + project.minecraft_version
         }
     }
 }

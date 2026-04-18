@@ -1,6 +1,6 @@
 ![Wlodzimierz The Cat](https://cdn.modrinth.com/data/4ERzEEU7/d9f1d312f95fd5c0754d745a283f6c74dd921cc1_96.webp)
-# Wlodzimiers Blocks
-### Wlodzimiers Blocks is a server-side mod that **plans to add** various custom decoration and functional blocks by using the [Polymer](https://github.com/Patbox/polymer) library by [Patbox](https://modrinth.com/user/Patbox)
+# dhpOS Blocks
+### dhpOS Blocks plans to add some blocks face from K7A2 and C5K67 by using the [Polymer](https://github.com/Patbox/polymer) library by [Patbox](https://modrinth.com/user/Patbox)
 
 ---
 

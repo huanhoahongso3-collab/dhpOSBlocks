@@ -1,6 +1,0 @@
-{
-  "parent": "wlodzimiers_blocks:block/template_kitchen_tiles",
-  "textures": {
-    "tiles": "wlodzimiers_blocks:block/green_kitchen_tiles"
-  }
-}
