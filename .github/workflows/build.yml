@@ -1,23 +1,39 @@
-name: Check Wlodzimiers Blocks
+name: Build and Archive Mod
+
 on:
-  - push
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
 jobs:
-  gradle:
+  build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout Commit
         uses: actions/checkout@v4
-      - name: Fetch Tags
-        run: git fetch --unshallow --tags -f
+
       - name: Set up JDK
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
           java-version: '21'
+          cache: 'gradle' # Automatically caches gradle dependencies
+
       - name: Make gradlew executable
         run: chmod +x ./gradlew
-      - name: Check Build
-        env:
-          MODRINTH_TOKEN: ${{secrets.MODRINTH_TOKEN}}
-          CURSEFORGE_API_KEY: ${{secrets.CURSEFORGE_API_KEY}}
-        run: ./gradlew check
+
+      - name: Build and Test
+        # 'build' runs 'check' (tests) and creates the jar files
+        run: ./gradlew build
+
+      - name: Upload Mod Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Minecraft-Mod-Jar
+          # This path targets the default Gradle output folder for jars. 
+          # It uses a wildcard to grab the compiled mod but ignore the '-sources' or '-dev' jars if they exist.
+          path: build/libs/!(*-sources|*-dev|*-shadow).jar
+          if-no-files-found: error
+          
