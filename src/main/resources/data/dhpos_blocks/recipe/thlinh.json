@@ -7,8 +7,8 @@
     "###"
   ],
   "key": {
-    "#": "minecraft:stone",
-    "*": "minecraft:dirt"
+    "#": { "tag": "minecraft:planks" },
+    "*": { "item": "minecraft:sand" }
   },
   "result": {
     "count": 1,

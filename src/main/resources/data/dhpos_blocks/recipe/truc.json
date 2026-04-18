@@ -2,13 +2,13 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    "###",
     "#*#",
-    "###"
+    "*#*",
+    "#*#"
   ],
   "key": {
-    "#": "minecraft:stone",
-    "*": "minecraft:dirt"
+    "#": { "item": "minecraft:stick" },
+    "*": { "item": "minecraft:gravel" }
   },
   "result": {
     "count": 1,

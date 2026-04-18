@@ -7,8 +7,8 @@
     "###"
   ],
   "key": {
-    "#": "minecraft:stone",
-    "*": "minecraft:dirt"
+    "#": { "item": "minecraft:stone" },
+    "*": { "item": "minecraft:deepslate" }
   },
   "result": {
     "count": 1,

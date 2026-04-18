@@ -7,8 +7,8 @@
     "###"
   ],
   "key": {
-    "#": "minecraft:stone",
-    "*": "minecraft:dirt"
+    "#": { "item": "minecraft:diorite" },
+    "*": { "tag": "minecraft:logs" }
   },
   "result": {
     "count": 1,
