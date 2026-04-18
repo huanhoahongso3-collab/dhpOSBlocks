@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "***",
+    "###",
+    "***"
+  ],
+  "key": {
+    "#": { "item": "minecraft:granite" },
+    "*": { "item": "minecraft:gravel" }
+  },
+  "result": {
+    "count": 1,
+    "id": "dhpos_blocks:khoinguyen"
+  }
+}

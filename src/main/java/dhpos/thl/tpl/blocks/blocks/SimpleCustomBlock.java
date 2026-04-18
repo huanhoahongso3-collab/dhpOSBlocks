@@ -62,6 +62,7 @@ public class SimpleCustomBlock extends Block implements PolymerTexturedBlock {
         register("ngocanh", BlockModelType.FULL_BLOCK, Blocks.STONE);
         register("nguyenlinh", BlockModelType.FULL_BLOCK, Blocks.STONE);
         register("nguyenminh", BlockModelType.FULL_BLOCK, Blocks.STONE);
+        register("khoinguyen", BlockModelType.FULL_BLOCK, Blocks.STONE);
         register("nguyenphuc", BlockModelType.FULL_BLOCK, Blocks.STONE);
         register("nhatminh", BlockModelType.FULL_BLOCK, Blocks.STONE);
         register("phuong", BlockModelType.FULL_BLOCK, Blocks.STONE);
@@ -105,6 +106,7 @@ public class SimpleCustomBlock extends Block implements PolymerTexturedBlock {
         register("thuy", BlockModelType.FULL_BLOCK, Blocks.STONE);
         register("tuan", BlockModelType.FULL_BLOCK, Blocks.STONE);
         register("vy", BlockModelType.FULL_BLOCK, Blocks.STONE);
+
     }
 
     @Override
