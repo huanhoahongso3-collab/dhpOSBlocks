@@ -7,7 +7,7 @@
   ],
   "key": {
     "#": "minecraft:cobblestone",
-    "*": "minecraft:stone"
+    "*": "minecraft:cobblestone"
   },
   "result": {
     "id": "dhpos_blocks:danh"

@@ -6,7 +6,7 @@
     "***"
   ],
   "key": {
-    "#": "minecraft:stone",
+    "#": "minecraft:cobblestone",
     "*": "minecraft:andesite"
   },
   "result": {

@@ -6,7 +6,7 @@
     "#*#"
   ],
   "key": {
-    "#": "minecraft:deepslate",
+    "#": "minecraft:cobbled_deepslate",
     "*": "minecraft:sand"
   },
   "result": {

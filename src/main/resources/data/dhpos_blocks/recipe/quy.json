@@ -7,7 +7,7 @@
   ],
   "key": {
     "#": "#minecraft:logs",
-    "*": "minecraft:deepslate"
+    "*": "minecraft:cobbled_deepslate"
   },
   "result": {
     "id": "dhpos_blocks:quy"

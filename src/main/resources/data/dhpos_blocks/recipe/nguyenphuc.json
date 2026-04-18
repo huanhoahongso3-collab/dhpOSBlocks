@@ -7,7 +7,7 @@
   ],
   "key": {
     "#": "#minecraft:planks",
-    "*": "minecraft:deepslate"
+    "*": "minecraft:cobbled_deepslate"
   },
   "result": {
     "id": "dhpos_blocks:nguyenphuc"

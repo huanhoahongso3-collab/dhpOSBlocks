@@ -6,8 +6,8 @@
     "###"
   ],
   "key": {
-    "#": "minecraft:stone",
-    "*": "minecraft:deepslate"
+    "#": "minecraft:cobblestone",
+    "*": "minecraft:cobbled_deepslate"
   },
   "result": {
     "id": "dhpos_blocks:tai"

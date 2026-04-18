@@ -7,7 +7,7 @@
   ],
   "key": {
     "#": "#minecraft:logs",
-    "*": "minecraft:stone"
+    "*": "minecraft:cobblestone"
   },
   "result": {
     "id": "dhpos_blocks:haiyen"

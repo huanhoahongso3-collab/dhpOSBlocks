@@ -7,7 +7,7 @@
   ],
   "key": {
     "#": "minecraft:cobblestone",
-    "*": "minecraft:deepslate"
+    "*": "minecraft:cobbled_deepslate"
   },
   "result": {
     "id": "dhpos_blocks:ngoc"

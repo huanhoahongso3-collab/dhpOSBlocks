@@ -7,7 +7,7 @@
   ],
   "key": {
     "#": "minecraft:dirt",
-    "*": "minecraft:deepslate"
+    "*": "minecraft:cobbled_deepslate"
   },
   "result": {
     "id": "dhpos_blocks:thienminh"
