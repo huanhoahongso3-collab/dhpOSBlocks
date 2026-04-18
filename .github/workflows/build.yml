@@ -7,9 +7,8 @@ on:
     branches: [ "main", "master" ]
 
 jobs:
-  build:
+  gradle:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout Commit
         uses: actions/checkout@v4
@@ -19,21 +18,29 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '21'
-          cache: 'gradle' # Automatically caches gradle dependencies
+          cache: 'gradle'
 
       - name: Make gradlew executable
         run: chmod +x ./gradlew
 
-      - name: Build and Test
-        # 'build' runs 'check' (tests) and creates the jar files
+      - name: Build with Gradle
+        # 'build' includes 'check' (tests) and 'assemble' (jar creation)
         run: ./gradlew build
+
+      - name: List Build Artifacts (Debug)
+        # This helps you see the exact filenames if the upload fails
+        run: ls -R build/libs/
 
       - name: Upload Mod Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: Minecraft-Mod-Jar
-          # This path targets the default Gradle output folder for jars. 
-          # It uses a wildcard to grab the compiled mod but ignore the '-sources' or '-dev' jars if they exist.
-          path: build/libs/!(*-sources|*-dev|*-shadow).jar
+          name: compiled-mod
+          # This pattern includes all jars but excludes common metadata/dev jars
+          path: |
+            build/libs/*.jar
+            !build/libs/*-sources.jar
+            !build/libs/*-dev.jar
+            !build/libs/*-shadow.jar
+            !build/libs/*-api.jar
           if-no-files-found: error
           
