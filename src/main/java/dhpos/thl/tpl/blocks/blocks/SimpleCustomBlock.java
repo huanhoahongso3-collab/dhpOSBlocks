@@ -75,6 +75,36 @@ public class SimpleCustomBlock extends Block implements PolymerTexturedBlock {
         register("uyen", BlockModelType.FULL_BLOCK, Blocks.STONE);
         register("vhlinh", BlockModelType.FULL_BLOCK, Blocks.STONE);
         register("vuthao", BlockModelType.FULL_BLOCK, Blocks.STONE);
+        register("bang", BlockModelType.FULL_BLOCK, Blocks.STONE);
+        register("chauanh", BlockModelType.FULL_BLOCK, Blocks.STONE);
+        register("dao", BlockModelType.FULL_BLOCK, Blocks.STONE);
+        register("daophuc", BlockModelType.FULL_BLOCK, Blocks.STONE);
+        register("c5_ducanh", BlockModelType.FULL_BLOCK, Blocks.STONE);
+        register("c5_duong", BlockModelType.FULL_BLOCK, Blocks.STONE);
+        register("c5_giang", BlockModelType.FULL_BLOCK, Blocks.STONE);
+        register("ha", BlockModelType.FULL_BLOCK, Blocks.STONE);
+        register("haan", BlockModelType.FULL_BLOCK, Blocks.STONE);
+        register("haiyen", BlockModelType.FULL_BLOCK, Blocks.STONE);
+        register("hamy", BlockModelType.FULL_BLOCK, Blocks.STONE);
+        register("khang", BlockModelType.FULL_BLOCK, Blocks.STONE);
+        register("c5_khanh", BlockModelType.FULL_BLOCK, Blocks.STONE);
+        register("lehaiyen", BlockModelType.FULL_BLOCK, Blocks.STONE);
+        register("ly", BlockModelType.FULL_BLOCK, Blocks.STONE);
+        register("ngoc", BlockModelType.FULL_BLOCK, Blocks.STONE);
+        register("nguyen", BlockModelType.FULL_BLOCK, Blocks.STONE);
+        register("nhutruc", BlockModelType.FULL_BLOCK, Blocks.STONE);
+        register("phat", BlockModelType.FULL_BLOCK, Blocks.STONE);
+        register("phuonganh", BlockModelType.FULL_BLOCK, Blocks.STONE);
+        register("quang", BlockModelType.FULL_BLOCK, Blocks.STONE);
+        register("quy", BlockModelType.FULL_BLOCK, Blocks.STONE);
+        register("quynhlam", BlockModelType.FULL_BLOCK, Blocks.STONE);
+        register("tan", BlockModelType.FULL_BLOCK, Blocks.STONE);
+        register("thaian", BlockModelType.FULL_BLOCK, Blocks.STONE);
+        register("thanhlam", BlockModelType.FULL_BLOCK, Blocks.STONE);
+        register("thienminh", BlockModelType.FULL_BLOCK, Blocks.STONE);
+        register("thuy", BlockModelType.FULL_BLOCK, Blocks.STONE);
+        register("tuan", BlockModelType.FULL_BLOCK, Blocks.STONE);
+        register("vy", BlockModelType.FULL_BLOCK, Blocks.STONE);
     }
 
     @Override
