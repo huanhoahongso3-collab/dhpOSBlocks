@@ -1,17 +1,15 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
   "pattern": [
     "***",
     "###",
     "***"
   ],
   "key": {
-    "#": { "item": "minecraft:granite" },
-    "*": { "tag": "minecraft:planks" }
+    "#": "minecraft:granite",
+    "*": "#minecraft:planks"
   },
   "result": {
-    "count": 1,
     "id": "dhpos_blocks:lam"
   }
 }

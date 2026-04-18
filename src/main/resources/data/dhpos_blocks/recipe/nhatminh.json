@@ -1,17 +1,15 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
   "pattern": [
     "***",
     "###",
     "***"
   ],
   "key": {
-    "#": { "item": "minecraft:stick" },
-    "*": { "item": "minecraft:dirt" }
+    "#": "minecraft:stick",
+    "*": "minecraft:dirt"
   },
   "result": {
-    "count": 1,
     "id": "dhpos_blocks:nhatminh"
   }
 }

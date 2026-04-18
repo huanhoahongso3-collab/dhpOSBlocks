@@ -1,17 +1,15 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
   "pattern": [
     "###",
     "#*#",
     "###"
   ],
   "key": {
-    "#": { "item": "minecraft:diorite" },
-    "*": { "tag": "minecraft:logs" }
+    "#": "minecraft:diorite",
+    "*": "#minecraft:logs"
   },
   "result": {
-    "count": 1,
     "id": "dhpos_blocks:ngocanh"
   }
 }

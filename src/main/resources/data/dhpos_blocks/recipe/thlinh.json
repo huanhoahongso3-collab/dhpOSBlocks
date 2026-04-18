@@ -1,17 +1,15 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
   "pattern": [
     "###",
     "#*#",
     "###"
   ],
   "key": {
-    "#": { "tag": "minecraft:planks" },
-    "*": { "item": "minecraft:sand" }
+    "#": "#minecraft:planks",
+    "*": "minecraft:sand"
   },
   "result": {
-    "count": 1,
     "id": "dhpos_blocks:thlinh"
   }
 }

@@ -1,17 +1,15 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
   "pattern": [
     "***",
     "###",
     "***"
   ],
   "key": {
-    "#": { "item": "minecraft:cobblestone" },
-    "*": { "item": "minecraft:stone" }
+    "#": "minecraft:cobblestone",
+    "*": "minecraft:stone"
   },
   "result": {
-    "count": 1,
     "id": "dhpos_blocks:c5_ducanh"
   }
 }

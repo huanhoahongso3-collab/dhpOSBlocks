@@ -1,17 +1,15 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
   "pattern": [
     "***",
     "###",
     "***"
   ],
   "key": {
-    "#": { "item": "minecraft:gravel" },
-    "*": { "item": "minecraft:andesite" }
+    "#": "minecraft:gravel",
+    "*": "minecraft:andesite"
   },
   "result": {
-    "count": 1,
     "id": "dhpos_blocks:hoaian"
   }
 }

@@ -1,17 +1,15 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
   "pattern": [
     "#*#",
     "*#*",
     "#*#"
   ],
   "key": {
-    "#": { "item": "minecraft:diorite" },
-    "*": { "item": "minecraft:dirt" }
+    "#": "minecraft:diorite",
+    "*": "minecraft:dirt"
   },
   "result": {
-    "count": 1,
     "id": "dhpos_blocks:haminh"
   }
 }

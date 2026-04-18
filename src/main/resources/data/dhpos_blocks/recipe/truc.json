@@ -1,17 +1,15 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
   "pattern": [
     "#*#",
     "*#*",
     "#*#"
   ],
   "key": {
-    "#": { "item": "minecraft:stick" },
-    "*": { "item": "minecraft:gravel" }
+    "#": "minecraft:stick",
+    "*": "minecraft:gravel"
   },
   "result": {
-    "count": 1,
     "id": "dhpos_blocks:truc"
   }
 }

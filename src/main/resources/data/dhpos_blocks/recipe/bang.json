@@ -1,17 +1,15 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
   "pattern": [
     "#*#",
     "*#*",
     "#*#"
   ],
   "key": {
-    "#": { "item": "minecraft:sand" },
-    "*": { "tag": "minecraft:logs" }
+    "#": "minecraft:sand",
+    "*": "#minecraft:logs"
   },
   "result": {
-    "count": 1,
     "id": "dhpos_blocks:bang"
   }
 }

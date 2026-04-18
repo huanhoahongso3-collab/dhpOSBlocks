@@ -1,17 +1,15 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
   "pattern": [
     "###",
     "#*#",
     "###"
   ],
   "key": {
-    "#": { "item": "minecraft:granite" },
-    "*": { "item": "minecraft:diorite" }
+    "#": "minecraft:granite",
+    "*": "minecraft:diorite"
   },
   "result": {
-    "count": 1,
     "id": "dhpos_blocks:nguyen"
   }
 }

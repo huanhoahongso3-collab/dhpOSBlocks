@@ -1,17 +1,15 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
   "pattern": [
     "#*#",
     "*#*",
     "#*#"
   ],
   "key": {
-    "#": { "item": "minecraft:deepslate" },
-    "*": { "item": "minecraft:sand" }
+    "#": "minecraft:deepslate",
+    "*": "minecraft:sand"
   },
   "result": {
-    "count": 1,
     "id": "dhpos_blocks:vuthao"
   }
 }
